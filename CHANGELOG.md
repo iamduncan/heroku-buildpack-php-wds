@@ -1,5 +1,11 @@
 # heroku-buildpack-php CHANGELOG
 
+## v159 (2019-07-??)
+
+### ADD
+
+- Automatically run 'composer test' if present, or one of 'codecept'/'behat'/'phpspec'/'atoum'/'kahlan'/'peridot'/'phpunit', on Heroku CI [David Zuelke]
+
 ## v158 (2019-07-04)
 
 ### ADD
