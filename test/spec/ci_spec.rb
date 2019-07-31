@@ -66,6 +66,17 @@ describe "A PHP application on Heroku CI", :focused => true do
 			end
 		end
 	end
+
+	context "with Peridot" do
+		let(:app) {
+			new_ci_app_with_stack_and_platrepo('test/fixtures/ci/peridot')
+		}
+		it "executes 'peridot'" do
+			app.run_ci do |test_run|
+				expect(test_run.output).to match("Peridot found, executing 'peridot'...")
+			end
+		end
+	end
 	
 	context "with PHPUnit" do
 		let(:app) {
