@@ -749,4 +749,4 @@ fi
 export COMPOSER="$COMPOSER_bak"
 unset COMPOSER_bak
 
-mkdir -p /config/jwt
+mkdir -p /app/config/jwt
