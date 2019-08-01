@@ -750,3 +750,5 @@ export COMPOSER="$COMPOSER_bak"
 unset COMPOSER_bak
 
 mkdir -p /app/config/jwt
+openssl genrsa -out /app/config/jwt/private.pem -passout env:JWT_PASSPHRASE -aes256 4096
+openssl rsa -pubout -in /app/config/jwt/private.pem -out /app/config/jwt/public.pem -passin env:JWT_PASSPHRASE
