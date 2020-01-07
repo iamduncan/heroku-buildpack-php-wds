@@ -1,4 +1,4 @@
-FROM heroku/heroku:18-build
+FROM heroku/heroku:18-build.v18
 
 WORKDIR /app
 ENV WORKSPACE_DIR=/app/support/build
@@ -7,6 +7,7 @@ ENV S3_BUCKET=lang-php
 ENV S3_PREFIX=dist-heroku-18-develop/
 ENV S3_REGION=s3
 ENV STACK=heroku-18
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y python-pip
 
